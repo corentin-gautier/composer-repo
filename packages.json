@@ -670,6 +670,24 @@
           "url": "https://github.com/corentin-gautier/no-thanks.git",
           "reference": "88cc2a454691dd9cac23a2790fe3534f105a02cc"
         }
+      },
+      "0.1.3": {
+        "name": "cgsoft/no-thanks",
+        "description": "An ultra-light consent banner: no dependency, no cookie, respects Do Not Track and Global Privacy Control.",
+        "type": "wordpress-plugin",
+        "license": "GPL-3.0-or-later",
+        "version": "0.1.3",
+        "require": {},
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/corentin-gautier/no-thanks/archive/5b9de714c6790ef31c6c479366dd769a2415580c.zip",
+          "reference": "5b9de714c6790ef31c6c479366dd769a2415580c"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/corentin-gautier/no-thanks.git",
+          "reference": "5b9de714c6790ef31c6c479366dd769a2415580c"
+        }
       }
     }
   }
