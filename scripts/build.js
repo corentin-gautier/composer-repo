@@ -23,10 +23,13 @@ const tags = repo => {
 (async () => {
   const packages = {};
   for (const repo of repos) {
+    // Only the package name the repo uses today: tags from before a rename are left out
+    const { name } = await (await fetch(`https://raw.githubusercontent.com/${repo}/HEAD/composer.json`)).json();
     for (const { sha, tag } of tags(repo)) {
       const res = await fetch(`https://raw.githubusercontent.com/${repo}/${sha}/composer.json`);
       if (!res.ok) continue;
       const json = await res.json();
+      if (json.name !== name) continue;
       const version = tag.replace(/^v/, '');
       packages[json.name] ??= {};
       packages[json.name][version] = {
